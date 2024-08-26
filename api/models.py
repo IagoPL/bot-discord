@@ -1,11 +1,9 @@
-from flask_sqlalchemy import SQLAlchemy
-
-# Instancia de SQLAlchemy
-db = SQLAlchemy()
+# Importar la instancia de db desde database.py
+from database import db
 
 # Definición del modelo de la tabla "Votacion"
 class Votacion(db.Model):
-    __tablename__ = 'votaciones'  # TODO asegurarse que se el nombre de la tabla en la base de datos
+    __tablename__ = 'votaciones'  # Nombre de la tabla en la base de datos
 
     id = db.Column(db.Integer, primary_key=True)
     pregunta = db.Column(db.String(200), nullable=False)

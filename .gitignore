@@ -1,2 +1,42 @@
+# Excluir archivos y carpetas generados por Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Excluir entornos virtuales de Python
+env/
+venv/
+ENV/
+.venv/
+.VENV/
+
+# Excluir archivos de configuración de IDE
+.vscode/
+.idea/
+
+# Excluir archivos de configuración de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Excluir archivos de logs
+*.log
+
+# Excluir bases de datos temporales
+*.sqlite3
+
+# Excluir archivos de caché de Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Excluir archivos de entorno de Python
 .env
-/.venv
+.venv
+
+# Excluir los archivos de compilación
+build/
+dist/
+*.egg-info/
+
+# Excluir archivos relacionados con Docker
+docker-compose.yml
+Dockerfile

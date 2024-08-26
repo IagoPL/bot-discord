@@ -1,7 +1,7 @@
 import logging
 from flask import Flask
 from routes import api_bp
-from database import init_db
+from database import init_db  # Asegúrate de importar `init_db` desde database.py
 from dotenv import load_dotenv
 import os
 
@@ -35,4 +35,4 @@ def prueba_json():
 
 # Ejecutar la aplicación Flask
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='127.0.0.1', port=5000, debug=True)
