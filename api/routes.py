@@ -39,3 +39,10 @@ def cerrar_votacion():
         return jsonify({"message": "Resultados guardados"}), 200
     
     return jsonify({"error": "Votación no encontrada"}), 404
+
+@api_bp.route('/prueba_json', methods=['POST'])
+def prueba_json():
+    data = request.json
+    if not data:
+        return jsonify({"error": "No se enviaron datos JSON"}), 415
+    return jsonify({"message": "JSON recibido correctamente", "data": data}), 200
