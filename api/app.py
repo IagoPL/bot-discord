@@ -1,7 +1,7 @@
 import logging
 from flask import Flask
 from routes import api_bp
-from database import init_db  # Asegúrate de importar `init_db` desde database.py
+from database import init_db
 from dotenv import load_dotenv
 import os
 
