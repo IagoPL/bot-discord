@@ -9,7 +9,6 @@ class Votacion(db.Model):
     resultados = db.Column(db.PickleType, nullable=False, default=lambda: {})  # Almacena un diccionario con los resultados
     canal_id = db.Column(db.Integer, nullable=False)
     servidor_id = db.Column(db.Integer, nullable=False)
-    cerrada = db.Column(db.Boolean, default=False)  # Campo para indicar si la votación está cerrada
 
     def __init__(self, pregunta, opciones, canal_id, servidor_id):
         self.pregunta = pregunta
