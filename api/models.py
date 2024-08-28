@@ -1,5 +1,5 @@
 from database import db
-
+import pickle
 class Votacion(db.Model):
     __tablename__ = 'votaciones'
 
@@ -15,4 +15,4 @@ class Votacion(db.Model):
         self.opciones = opciones
         self.canal_id = canal_id
         self.servidor_id = servidor_id
-        self.resultados = {opcion: 0 for opcion in opciones}  # Inicializar resultados con 0 votos
+        self.resultados = pickle.dumps({opcion: 0 for opcion in opciones})  # Inicializar resultados con 0 votos
